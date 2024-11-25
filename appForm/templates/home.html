@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} TecnoForm {% endblock %}
+
+
+{% block conteudo %}
+<div class="container-card">
+    
+    <div class="img-card">
+        <img src="{% static 'logo.png'%}" alt="Logo TecnoBombas">
+    </div>
+
+    <div class="body-card">
+        <h2>TecnoBombas</h2>
+        
+        <a href="{% url 'add_cep' %}" class="btn btn-success"><b>Adicionar CEP</b></a>
+        
+        <table class="table">   
+            <tbody>
+                {% for cep in ceps %}
+                <tr>
+                    <td><h2>{{cep.cep}}</h2></td>
+
+                    <td>
+                        <a href="{% url 'editar_cep' cep.id %}" class="btn btn-warning">Editar</a>
+                        <a href="{% url 'excluir_cep' cep.id %}" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+body {
+    background: radial-gradient(circle, #111780, #000005);
+
+    height: 100vh;
+    margin: 0; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #191D61;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.img-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.body-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    text-align: center;
+}
+
+h1, h2, p {
+    color: white;
+}
+
+

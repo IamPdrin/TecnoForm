@@ -1,0 +1,26 @@
+{% extends 'base.html '%}
+{% load static %}
+
+{% block titulo %} Editar CEP {% endblock %}
+
+{% block conteudo %}
+<div class="container-card">
+
+    <div class="img-card">
+        <img src="{% static 'logo.png'%}" alt="Logo TecnoBombas">
+    </div>
+
+    <div class="body-card">
+        <h2>TecnoBombas</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div class="d-grid gap-2">
+                <input type="submit" value="Atualizar" class="btn btn-success" expand="block">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
