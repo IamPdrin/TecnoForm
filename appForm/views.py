@@ -30,7 +30,7 @@ def add_cep(request):
     formCep = FormCep(request.POST or None)
 
     if request.POST:
-        if formCep.is_valid(): #Além de verificar se é válido, criar código de consumo de API que verifique se o CEP existe (por meio da ViaCep)
+        if formCep.is_valid(): #Além de verificar se é válido, criar código de consumo de API que verifique se o CEP existe (por meio da ViaCep) e depois a pipeline odeio lies of p, furia primordial and jojo
             formCep.save()
 
             return redirect('appForm')
