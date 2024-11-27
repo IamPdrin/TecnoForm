@@ -1,5 +1,7 @@
 from django.urls import path 
 from . import views
+path('add_cep/', views.add_cep, name='add_cep'),
+
 
 urlpatterns = [
     path('', views.appForm, name="appForm"),
